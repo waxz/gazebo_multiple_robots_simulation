@@ -1,0 +1,20 @@
+<launch>
+
+    <!-- BEGIN ROBOT 1-->
+  <group ns="Robot1">
+    <arg name="robot_name"  value="Robot1" /> 
+    <include file="$(find ubt_amcl)/launch/demo_gz_onerobot.launch" > 
+      <arg name="robot_name"  value="$(arg robot_name)" />
+    </include>
+  </group>
+
+    <!-- BEGIN ROBOT 2-->
+  <group ns="Robot2">
+    <arg name="robot_name"  value="Robot2" />
+    <include file="$(find ubt_amcl)/launch/demo_gz_onerobot.launch" > 
+      <arg name="robot_name"  value="$(arg robot_name)" />
+    </include>
+  </group>
+
+
+</launch>
