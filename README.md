@@ -52,3 +52,12 @@ multiple robots simulation in gazebo, slam and navigation
     </model>
   ```
 
+-  ### [velodyne_simulator](https://bitbucket.org/DataspeedInc/velodyne_simulator)
+
+[turtlebot3_waffle_lidar.gazebo.xacro](urdf/turtlebot3_waffle_lidar.gazebo.xacro)
+```xml
+  <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
+  <xacro:VLP-16 parent="base_link" name="velodyne" topic="/velodyne_points" organize_cloud="${organize_cloud}" hz="10" samples="440" gpu="${gpu}">
+    <origin xyz="0 0 0.4" rpy="0 0 0" />
+  </xacro:VLP-16>
+```
